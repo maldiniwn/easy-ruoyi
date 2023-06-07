@@ -1,0 +1,1160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EasyRuoyi.Core</name>
+    </assembly>
+    <members>
+        <member name="T:EasyRuoyi.Core.Attributes.GuidRequiredAttribute">
+            <summary>
+            验证Guid是否为 Guid.Empty
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.BusinessModel.ResultModel">
+            <summary>
+            接口通用返回模型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.ResultModel.Code">
+            <summary>
+            Code
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.ResultModel.Message">
+            <summary>
+            Message
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.ResultModel.Data">
+            <summary>
+            Data
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.BusinessModel.SelectListModel`1">
+            <summary>
+            下拉框实体类
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.SelectListModel`1.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.SelectListModel`1.Label">
+            <summary>
+            显示
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.SelectListModel`1.Extras">
+            <summary>
+            额外的信息（如：枚举的名称）
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.BusinessModel.UploadItemModel">
+            <summary>
+            上传文件模型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.UploadItemModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.UploadItemModel.Name">
+            <summary>
+            原始文件名称（上传时候的文件名）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.UploadItemModel.Length">
+            <summary>
+            文件大小（单位是字节）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.BusinessModel.UploadItemModel.Url">
+            <summary>
+            远程访问Url
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Const.ClaimConst.CLAINM_USERID">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Const.ClaimConst.CLAINM_USERNAME">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Const.ClaimConst.CLAINM_NAME">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Const.ClaimConst.CLAINM_SUPERADMIN">
+            <summary>
+            是否超级管理
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Const.CommonConst.CACHE_KEY_CODE">
+            <summary>
+            验证码缓存
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Const.SystemConst.AdminRoleCode">
+            <summary>
+            超级管理员用户 RoleCode
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Const.SystemConst.AdminPermissionCode">
+            <summary>
+            超级管理员用户 PermissionCode
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.DataEncryption.Extensions.EncryptionExtension">
+            <summary>
+            加密扩展方法类
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.DataEncryption.Extensions.EncryptionExtension.ToSHA256Encryp(System.String)">
+            <summary>
+            字符串的 SHA256 加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.DataEncryption.Extensions.EncryptionExtension.ToSHA256Encryp(System.IO.Stream)">
+            <summary>
+            流的 SHA256 加密
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Core.DataEncryption.SHA256Encryption">
+            <summary>
+            SHA256加密
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.DataEncryption.SHA256Encryption.Encrypt(System.String)">
+            <summary>
+            字符串机密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.DataEncryption.SHA256Encryption.Encrypt(System.IO.Stream)">
+            <summary>
+            stream机密
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.DataEncryption.SHA256Encryption.ToSHA256String(System.Byte[])">
+            <summary>
+            加密
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Core.Entities.DEntityBase">
+            <summary>
+            自定义实体基类
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.Id">
+            <summary>
+            主键Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.CreatedUserId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.CreatedUserName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.UpdatedUserId">
+            <summary>
+            修改人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.UpdatedUserName">
+            <summary>
+            修改人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.UpdatedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.IsDeleted">
+            <summary>
+            软删除
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Entities.PrivateDEntityBase`1.DeletedTime">
+            <summary>
+            软删除时间
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.Enums.EnumGender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumGender.Unknow">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumGender.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumGender.Female">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.Enums.EnumHttpStatusCode">
+            <summary>
+            HTTP状态码
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Continue">
+            <summary>
+            客户端可能继续其请求
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.SwitchingProtocols">
+            <summary>
+            正在更改协议版本或协议
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.OK">
+            <summary>
+            请求成功，且请求的信息包含在响应中 1 200 接口请求成功
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Created">
+            <summary>
+            #请求导致在响应被发送前创建新资源
+            2 201 接口请求成功，前端无需提示 message
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Accepted">
+            <summary>
+            请求已被接受做进一步处理
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.NonAuthoritativeInformation">
+            <summary>
+            返回的元信息来自缓存副本而不是原始服务器，因此可能不正确
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.NoContent">
+            <summary>
+            已成功处理请求并且响应已被设定为无内容
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.ResetContent">
+            <summary>
+            客户端应重置（或重新加载）当前资源
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.PartialContent">
+            <summary>
+            响应是包括字节范围的 GET请求所请求的部分响应
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.MultipleChoices">
+            <summary>
+            请求的信息有多种表示形式，默认操作是将此状态视为重定向
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.MovedPermanently">
+            <summary>
+            请求的信息已移到 Location头中指定的 URI 处
+            3 300 重定向
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Found">
+            <summary>
+            请求的信息位于 Location 头中指定的 URI 处
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.SeeOther">
+            <summary>
+            将客户端自动重定向到 Location 头中指定的 URI
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.NotModified">
+            <summary>
+            客户端的缓存副本是最新的
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.UseProxy">
+            <summary>
+            请求应使用位于 Location 头中指定的 URI 的代理服务器
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.BadRequest">
+            <summary>
+            服务器未能识别请求
+            4 400 客户端请求失败，无需提示 message
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Unauthorized">
+            <summary>
+            请求的资源要求身份验证
+            5 401 用户未登录
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.PaymentRequired">
+            <summary>
+            需要付费
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Forbidden">
+            <summary>
+            服务器拒绝满足请求
+            6 403 用户无权限
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.NotFound">
+            <summary>
+            请求的资源不在服务器上
+            7 404 未找到资源
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.MethodNotAllowed">
+            <summary>
+            请求的资源上不允许请求方法（POST或 GET）
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.NotAcceptable">
+            <summary>
+            客户端已用 Accept 头指示将不接受资源的任何可用表示形式
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.ProxyAuthenticationRequired">
+            <summary>
+            请求的代理要求身份验证
+            Proxy-authenticate 头包含如何执行身份验证的详细信息
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.RequestTimeout">
+            <summary>
+            客户端没有在服务器期望请求的时间内发送请求
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Conflict">
+            <summary>
+            由于服务器上的冲突而未能执行请求
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Gone">
+            <summary>
+            请求的资源不再可用
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.LengthRequired">
+            <summary>
+            缺少必需的 Content-length
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.PreconditionFailed">
+            <summary>
+            为此请求设置的条件失败，且无法执行此请求
+            条件是用条件请求标头（如 If-Match、If-None-Match 或 If-Unmodified-Since）设置的。
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.RequestEntityTooLarge">
+            <summary>
+            请求太大，服务器无法处理
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.RequestUriTooLong">
+            <summary>
+            URI 太长
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.UnsupportedMediaType">
+            <summary>
+            请求是不支持的类型
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.RequestedRangeNotSatisfiable">
+            <summary>
+            无法返回从资源请求的数据范围，因为范围的开头在资源的开头之前，或因为范围的结尾在资源的结尾之后
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.ExpectationFailed">
+            <summary>
+            服务器未能符合Expect头中给定的预期值
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.UpgradeRequired">
+            <summary>
+            服务器拒绝处理客户端使用当前协议发送的请求，但是可以接受其使用升级后的协议发送的请求
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.InternalServerError">
+            <summary>
+            服务器上发生了一般错误
+            500 服务端未捕获异常，无需提示 message
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.NotImplemented">
+            <summary>
+            服务器不支持请求的函数
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.BadGateway">
+            <summary>
+            中间代理服务器从另一代理或原始服务器接收到错误响应
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.ServiceUnavailable">
+            <summary>
+            服务器暂时不可用，通常是由于过多加载或维护
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.GatewayTimeout">
+            <summary>
+            中间代理服务器在等待来自另一个代理或原始服务器的响应时已超时
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.HttpVersionNotSupported">
+            <summary>
+            服务器不支持请求的HTTP版本
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.EnumHttpStatusCode.Error">
+            <summary>
+            506 服务端异常 带提示
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.Enums.ErrorCode">
+            <summary>
+            系统错误码
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1000">
+            <summary>
+            用户名或密码不正确
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1001">
+            <summary>
+            非法操作！禁止删除自己
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1002">
+            <summary>
+            记录不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1003">
+            <summary>
+            账号已存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1004">
+            <summary>
+            旧密码不匹配
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1005">
+            <summary>
+            测试数据禁止更改admin密码
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1006">
+            <summary>
+            数据已存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1007">
+            <summary>
+            数据不存在或含有关联引用，禁止删除
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1008">
+            <summary>
+            禁止为管理员分配角色
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1009">
+            <summary>
+            重复数据或记录含有不存在数据
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1010">
+            <summary>
+            禁止为超级管理员角色分配权限
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1011">
+            <summary>
+            非法数据
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1012">
+            <summary>
+            Id不能为空
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1013">
+            <summary>
+            所属机构不在自己的数据范围内
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1014">
+            <summary>
+            禁止删除超级管理员
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1015">
+            <summary>
+            禁止修改超级管理员状态
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1016">
+            <summary>
+            没有权限
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1017">
+            <summary>
+            账号已冻结
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1018">
+            <summary>
+            禁止删除管理员
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1019">
+            <summary>
+            禁止删除系统管理员角色(sys_manager_role)
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1020">
+            <summary>
+            禁止修改系统管理员角色(sys_manager_role)
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1021">
+            <summary>
+            禁止为系统管理员角色(sys_manager_role)分配权限
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1022">
+            <summary>
+            禁止为超级管理员分配角色
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1023">
+            <summary>
+            禁止删除默认租户
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D2000">
+            <summary>
+            父机构不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D2001">
+            <summary>
+            当前机构Id不能与父机构Id相同
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D2002">
+            <summary>
+            已有相同组织机构,编码或名称相同
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D2003">
+            <summary>
+            没有权限操作机构
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D2004">
+            <summary>
+            该机构下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D2005">
+            <summary>
+            附属机构下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D2006">
+            <summary>
+            只能增加下级机构
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D3000">
+            <summary>
+            字典类型不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D3001">
+            <summary>
+            字典类型已存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D3002">
+            <summary>
+            字典类型下面有字典值禁止删除
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D3003">
+            <summary>
+            字典值已存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D3004">
+            <summary>
+            字典值不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D3005">
+            <summary>
+            字典状态错误
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4000">
+            <summary>
+            菜单已存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4001">
+            <summary>
+            路由地址为空
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4002">
+            <summary>
+            打开方式为空
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4003">
+            <summary>
+            权限标识格式为空
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4004">
+            <summary>
+            权限标识格式错误
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4005">
+            <summary>
+            权限不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4006">
+            <summary>
+            父级菜单不能为当前节点，请重新选择父级菜单
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D4007">
+            <summary>
+            不能移动根节点
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D5000">
+            <summary>
+            已存在同名或同编码应用
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D5001">
+            <summary>
+            默认激活系统只能有一个
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D5002">
+            <summary>
+            该应用下有菜单禁止删除
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D5003">
+            <summary>
+            已存在同名或同编码应用
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D6000">
+            <summary>
+            已存在同名或同编码职位
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D6001">
+            <summary>
+            该职位下有员工禁止删除
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D7000">
+            <summary>
+            通知公告状态错误
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D7001">
+            <summary>
+            通知公告删除失败
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D7002">
+            <summary>
+            通知公告编辑失败
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D7003">
+            <summary>
+            通知公告操作失败，非发布者不能进行操作
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D8000">
+            <summary>
+            文件不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D8001">
+            <summary>
+            不允许的文件类型
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D8002">
+            <summary>
+            文件超过允许大小
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D9000">
+            <summary>
+            已存在同名或同编码参数配置
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D9001">
+            <summary>
+            禁止删除系统参数
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1100">
+            <summary>
+            已存在同名任务调度
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1101">
+            <summary>
+            任务调度不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1200">
+            <summary>
+            演示环境禁止修改数据
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1300">
+            <summary>
+            已存在同名或同管理员或同主机租户
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1400">
+            <summary>
+            该表代码模板已经生成过
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1501">
+            <summary>
+            该类型不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1502">
+            <summary>
+            该字段不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1503">
+            <summary>
+            该类型不是枚举类型
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1504">
+            <summary>
+            该实体不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1505">
+            <summary>
+            父菜单不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.D1600">
+            <summary>
+            已存在同名业务名称
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.xg1000">
+            <summary>
+            已存在同名或同编码项目
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.xg1001">
+            <summary>
+            已存在相同证件号码人员
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.xg1002">
+            <summary>
+            检测数据不存在
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Enums.ErrorCode.extras">
+            <summary>
+            附加错误，需要前端自己处理
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.Extensions.ErrorCodeExtension.Ex(System.String,EasyRuoyi.Core.Enums.EnumHttpStatusCode)">
+            <summary>
+            字符串 转换为 AppFriendlyException
+            默认code=400
+            </summary>
+            <param name="message"></param>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Extensions.QueryableExtension.Query``1(System.Linq.IQueryable{``0},System.Boolean)">
+            <summary>
+            过滤软删除
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query"></param>
+            <param name="includDeleted"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Extensions.SoftDeleteExtension.SoftDeleteAsync``1(Furion.DatabaseAccessor.IRepository{``0},``0)">
+            <summary>
+            软删除
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="repository"></param>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Extensions.SoftDeleteExtension.SoftDeleteAsync``1(Furion.DatabaseAccessor.IRepository{``0},System.Guid[])">
+            <summary>
+            批量软删除
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="repository"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Core.Options.RefreshTokenSettingOptions">
+            <summary>
+            刷新令牌设置
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Options.RefreshTokenSettingOptions.ExpiredTime">
+            <summary>
+            令牌过期时间（分钟）
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.EnumUtil">
+            <summary>
+            枚举扩展
+            </summary>
+        </member>
+        <member name="F:EasyRuoyi.Core.Utils.EnumUtil._enums">
+            <summary>
+            所有枚举缓存集合
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.EnumUtil.GetAllEnums(System.Reflection.Assembly)">
+            <summary>
+            所有枚举列表
+            </summary>
+            <param name="assembly"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.EnumUtil.GetEnumItems(System.String)">
+            <summary>
+            根据枚举类型名称，获取枚举项列表
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.EnumUtil.GetEnumItems(System.Type)">
+            <summary>
+            根据枚举类型名称，获取枚举项列表
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.GuidUtil">
+            <summary>
+            Guid工具类
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.GuidUtil.Create(System.String)">
+            <summary>
+            根据字符串，生成特定Guid
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.GuidUtil.Create">
+            <summary>
+            生成有序GUid
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.PagedUtil.ToADPagedList``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            分页拓展
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entities"></param>
+            <param name="pageIndex">页码，必须大于0</param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.PagedUtil.ToADPagedListAsync``1(System.Linq.IQueryable{``0},System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            分页拓展
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entities"></param>
+            <param name="pageIndex">页码，必须大于0</param>
+            <param name="pageSize"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.PagedUtil.ToADPagedList``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+            分页拓展
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="entities"></param>
+            <param name="pageIndex">页码，必须大于0</param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.PageInputBase.PageIndex">
+            <summary>
+            当前页码
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.PageInputBase.PageSize">
+            <summary>
+            页码容量
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.PageInputBase.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.PageInputBase.SortType">
+            <summary>
+            排序方法,默认升序
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.ReflectionUtil">
+            <summary>
+            反射工具
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.ReflectionUtil.GetDescriptionValue``1(System.Reflection.FieldInfo)">
+            <summary>
+            获取字段特性
+            </summary>
+            <param name="field"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.ReflectionUtil.GetDescriptionValue``1(System.Type)">
+            <summary>
+            获取类型的特性
+            </summary>
+            <param name="field"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.TreeBuildUtil`1">
+            <summary>
+            构建树形结构
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.TreeBuildUtil`1.Build(System.Collections.Generic.List{`0})">
+            <summary>
+            构建Tree
+            </summary>
+            <param name="nodes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.TreeBuildUtil`1.BuildChildren(System.Collections.Generic.List{`0},`0)">
+            <summary>
+            构建子节点
+            </summary>
+            <param name="nodes"></param>
+            <param name="parent"></param>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.TreeNode`1">
+            <summary>
+            树节点
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.TreeNode`1.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.TreeNode`1.PId">
+            <summary>
+            父节点
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.TreeNode`1.Name">
+            <summary>
+            节点名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.TreeNode`1.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.TreeNode`1.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.ValidateCodeUtil">
+            <summary>
+            验证码工具
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.ValidateCodeUtil.GenCode(System.Int32)">
+            <summary>
+            生成验证码
+            </summary>
+            <param name="length">指定验证码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.ValidateCodeUtil.CreateValidateGraphic(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            创建验证码的图片
+            </summary>
+            <param name="length"></param>
+            <param name="width"></param>
+            <param name="height"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.PageResult`1">
+            <summary>
+            分页结果
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.XnPageResult`1">
+            <summary>
+            小诺分页列表结果
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.XnRestfulResultProvider">
+            <summary>
+            规范化RESTful风格返回值
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.XnRestfulResultProvider.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext,Furion.FriendlyException.ExceptionMetadata)">
+            <summary>
+            异常返回值
+            </summary>
+            <param name="context"></param>
+            <param name="metadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.XnRestfulResultProvider.OnSucceeded(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext,System.Object)">
+            <summary>
+            成功返回值
+            </summary>
+            <param name="context"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.XnRestfulResultProvider.OnValidateFailed(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext,Furion.DataValidation.ValidationMetadata)">
+            <summary>
+            验证失败返回值
+            </summary>
+            <param name="context"></param>
+            <param name="metadata"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.XnRestfulResultProvider.OnResponseStatusCodes(Microsoft.AspNetCore.Http.HttpContext,System.Int32,Furion.UnifyResult.UnifyResultSettingsOptions)">
+            <summary>
+            处理输出状态码
+            </summary>
+            <param name="context"></param>
+            <param name="statusCode"></param>
+            <param name="unifyResultSettings"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Core.Utils.XnRestfulResultProvider.RESTfulResult(System.Int32,System.Boolean,System.Object,System.String)">
+            <summary>
+            返回 RESTful 风格结果集
+            </summary>
+            <param name="statusCode"></param>
+            <param name="succeeded"></param>
+            <param name="data"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Core.Utils.XnRestfulResult`1">
+            <summary>
+            RESTful风格---XIAONUO返回格式
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.XnRestfulResult`1.Success">
+            <summary>
+            执行成功
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.XnRestfulResult`1.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.XnRestfulResult`1.Message">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.XnRestfulResult`1.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.XnRestfulResult`1.Extras">
+            <summary>
+            附加数据
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Core.Utils.XnRestfulResult`1.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+    </members>
+</doc>

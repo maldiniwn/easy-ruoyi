@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>EasyRuoyi.Web.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EasyRuoyi.Web.Core.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EasyRuoyi.Application\EasyRuoyi.Application.csproj" />
+    <ProjectReference Include="..\EasyRuoyi.Database.Migrations\EasyRuoyi.Database.Migrations.csproj" />
+  </ItemGroup>
+
+</Project>

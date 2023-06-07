@@ -1,0 +1,20 @@
+{
+    "ConnectionStrings": {
+        //Sqlite连接字符串
+        //"DefaultConnection": "Data Source=./Admin.NET.db",
+        //"MultiTenantConnection": "Data Source=./Admin.NET_SaaS.db"
+
+        //Npgsql连接字符串
+        //"DefaultConnection": "HOST=localhost;PORT=5432;DATABASE=Admin.NET;PASSWORD=123456;USER ID=postgres;",
+        //"MultiTenantConnection": "HOST=localhost;PORT=5432;DATABASE=Admin.NET_SaaS;PASSWORD=123456;USER ID=postgres;"
+
+        //Mysql连接字符串
+        //"DefaultConnection": "Data Source=localhost;Database=Admin.NET;User ID=sa;Password=ok;pooling=true;port=3306;sslmode=none;CharSet=utf8;"
+        //"MultiTenantConnection": "Data Source=localhost;Database=Admin.NET_SaaS;User ID=root;Password=123456;pooling=true;port=3306;sslmode=none;CharSet=utf8;"
+
+        //MSSQL连接字符串
+        "DefaultConnection": "server=.;database=FileServerDB;uid=sa;pwd=ok;TrustServerCertificate=true"
+        //"DefaultConnection": "Server=localhost;Database=Admin.NET;User=sa;Password=123456;MultipleActiveResultSets=True;",
+        //"MultiTenantConnection": "Server=localhost;Database=Admin.NET_SaaS;User=sa;Password=123456;MultipleActiveResultSets=True;"
+    }
+}

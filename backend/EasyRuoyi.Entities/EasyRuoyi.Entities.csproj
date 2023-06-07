@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="seeddata.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="seeddata.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\EasyRuoyi.Core\EasyRuoyi.Core.csproj" />
+	</ItemGroup>
+
+</Project>

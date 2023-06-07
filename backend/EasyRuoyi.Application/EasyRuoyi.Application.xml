@@ -1,0 +1,2054 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EasyRuoyi.Application</name>
+    </assembly>
+    <members>
+        <member name="T:EasyRuoyi.Application.RemoteServices.FileServerRemoteService.FileServerRemoteService">
+            <summary>
+            调用文件服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.RemoteServices.FileServerRemoteService.FileServerRemoteService.#ctor">
+            <summary>
+            FileServerRemoteService
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.RemoteServices.FileServerRemoteService.FileServerRemoteService.GetSysFiles(System.Guid[])">
+            <summary>
+            查询文件列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.RemoteServices.FileServerRemoteService.IFileServerRemoteService">
+            <summary>
+            调用文件服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.RemoteServices.FileServerRemoteService.IFileServerRemoteService.GetSysFiles(System.Guid[])">
+            <summary>
+            查询文件列表
+            </summary>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.AccountServcie.AccountService">
+            <summary>
+            账户服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.AccountService.CaptchaImage">
+            <summary>
+            验证码图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.AccountService.Login(EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginInput)">
+            <summary>
+            登录，返回token
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.AccountService.GetLoginUserInfo">
+            <summary>
+            获取当前登录用户信息、角色编码、菜单权限标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.AccountService.GetRouterAndMenu">
+            <summary>
+            获取当前登录用户的前端路由、菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.AccountService.BuildRouter(System.Collections.Generic.List{EasyRuoyi.Entities.Entities.Menu})">
+            <summary>
+            将后端菜单转换成前端路由
+            </summary>
+            <param name="menus"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.CaptchaImageDto.CaptchaImageBase64">
+            <summary>
+            验证码图片Base64
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.CaptchaImageDto.CaptchaToken">
+            <summary>
+            验证码Token
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginDto.Token">
+            <summary>
+            登录Token
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginInput.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginInput.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginInput.CaptchaToken">
+            <summary>
+            验证码Token
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginUserInfoDto">
+            <summary>
+            当前登录用户信息、角色编码、菜单权限标识 Dto
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginUserInfoDto.Id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginUserInfoDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginUserInfoDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginUserInfoDto.RoleCodes">
+            <summary>
+            角色编码
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginUserInfoDto.PermissionCodes">
+            <summary>
+            菜单权限标识
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.AccountServcie.Dtos.MenuInfoDto">
+            <summary>
+            当前登录用户的前端菜单信息 Dto
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.MenuInfoDto.FullPath">
+            <summary>
+            菜单全路径
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.MenuInfoDto.Path">
+            <summary>
+            路由路径
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.MenuInfoDto.MenuIcon">
+            <summary>
+            菜单图标
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterAndMenuDto">
+            <summary>
+            返回前端路由、菜单
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterAndMenuDto.Menus">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterAndMenuDto.Routers">
+            <summary>
+            路由
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterInfoDto">
+            <summary>
+            当前登录用户的前端路由 Dto
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterInfoDto.FullPath">
+            <summary>
+            菜单全路径
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterInfoDto.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterInfoDto.Hidden">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterInfoDto.Component">
+            <summary>
+            组件
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.RouterInfoDto.Meta">
+            <summary>
+            路由Meta
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.AccountServcie.Dtos.Meta">
+            <summary>
+            Router Meta
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.Meta.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.Meta.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.Meta.IsCache">
+            <summary>
+            是否缓存（true:会被 keep-alive 缓存）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.AccountServcie.Dtos.Meta.Affix">
+            <summary>
+            tag标签是否固定，不能删除
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.AccountServcie.IAccountService">
+            <summary>
+            账户服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.IAccountService.CaptchaImage">
+            <summary>
+            验证码图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.IAccountService.Login(EasyRuoyi.Application.Services.AccountServcie.Dtos.LoginInput)">
+            <summary>
+            登录，返回token
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.IAccountService.GetLoginUserInfo">
+            <summary>
+            获取当前登录用户信息、角色编码、菜单权限标识
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.AccountServcie.IAccountService.GetRouterAndMenu">
+            <summary>
+            获取当前登录用户的前端路由、菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.CommonService.CommonService">
+            <summary>
+            通用服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.CommonService.CommonService.GetEnums(System.String)">
+            <summary>
+            获取枚举成员列表
+            </summary>
+            <param name="enumTypeName">枚举类型名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.CommonService.ICommonService">
+            <summary>
+            通用接口
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.CommonService.ICommonService.GetEnums(System.String)">
+            <summary>
+            获取枚举成员列表
+            </summary>
+            <param name="enumTypeName">枚举类型名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput">
+            <summary>
+            新增菜单 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.PId">
+            <summary>
+            父级
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.EnumMenuType">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.PermissionCode">
+            <summary>
+            权限标识
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.MenuIcon">
+             <summary>
+             菜单图标 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.RouterName">
+            <summary>
+            路由名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.Path">
+             <summary>
+             路由地址 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.Component">
+             <summary>
+             组件路径 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.IsCache">
+             <summary>
+             是否缓存 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.IsShow">
+             <summary>
+             是否显示 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.BatchDeleteMenuInput">
+            <summary>
+            批量删除菜单 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.BatchDeleteMenuInput.Ids">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.DeleteMenuInput">
+            <summary>
+            删除菜单 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.DeleteMenuInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.DetailMenuInput">
+            <summary>
+            菜单详情 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.DetailMenuInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto">
+            <summary>
+            菜单 Dto
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.PId">
+            <summary>
+            父级
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.PName">
+            <summary>
+            父级
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.FullPath">
+            <summary>
+            全路径
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.EnumMenuType">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.EnumMenuTypeStr">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.PermissionCode">
+            <summary>
+            权限标识
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.MenuIcon">
+             <summary>
+             菜单图标 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.RouterName">
+            <summary>
+            路由名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.Path">
+             <summary>
+             路由地址 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.Component">
+             <summary>
+             组件路径 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.IsCache">
+             <summary>
+             是否缓存 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.IsCacheStr">
+             <summary>
+             是否缓存 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.IsShow">
+             <summary>
+             是否显示 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.IsShowStr">
+             <summary>
+             是否显示 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.IsEnableStr">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.CreatedUserId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.CreatedUserName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.CreatedTimeStr">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.UpdatedUserId">
+            <summary>
+            修改人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.UpdatedUserName">
+            <summary>
+            修改人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.UpdatedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.UpdateTimeStr">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.IsDeleted">
+            <summary>
+            软删除
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuDto.DeletedTime">
+            <summary>
+            软删除时间
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.MenuExportDto`1">
+            <summary>
+            菜单导出模板Dto。
+            模板根据需要自行修改。
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuExportDto`1.Name">
+            <summary>
+            导出模板名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuExportDto`1.Menus">
+            <summary>
+            导出模板数据
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto">
+            <summary>
+            菜单分页 Dto
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.PId">
+            <summary>
+            父级
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.FullPath">
+            <summary>
+            全路径
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.EnumMenuType">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.EnumMenuTypeStr">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.PermissionCode">
+            <summary>
+            权限标识
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.MenuIcon">
+             <summary>
+             菜单图标 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.RouterName">
+            <summary>
+            路由名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.Path">
+             <summary>
+             路由地址 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.Component">
+             <summary>
+             组件路径 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.IsCache">
+             <summary>
+             是否缓存 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.IsCacheStr">
+             <summary>
+             是否缓存 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.IsShow">
+             <summary>
+             是否显示 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.IsShowStr">
+             <summary>
+             是否显示 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.IsEnableStr">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.CreatedUserId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.CreatedUserName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.CreatedTimeStr">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.UpdatedUserId">
+            <summary>
+            修改人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.UpdatedUserName">
+            <summary>
+            修改人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.UpdatedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.UpdateTimeStr">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.IsDeleted">
+            <summary>
+            软删除
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.DeletedTime">
+            <summary>
+            软删除时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.MenuTreeNode">
+            <summary>
+            菜单树节点
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.Dtos.PageMenuInput">
+            <summary>
+            菜单分页 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.PageMenuInput.Name">
+            <summary>
+            菜单名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.PageMenuInput.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.PId">
+            <summary>
+            父级
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.FullPath">
+            <summary>
+            全路径
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.EnumMenuType">
+            <summary>
+            菜单类型
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.PermissionCode">
+            <summary>
+            权限标识
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.MenuIcon">
+             <summary>
+             菜单图标 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.RouterName">
+            <summary>
+            路由名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.Path">
+             <summary>
+             路由地址 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.Component">
+             <summary>
+             组件路径 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.IsCache">
+             <summary>
+             是否缓存 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.IsShow">
+             <summary>
+             是否显示 
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.IMenuService">
+            <summary>
+            菜单服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Page(EasyRuoyi.Application.Services.MenuService.Dtos.PageMenuInput)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Detail(EasyRuoyi.Application.Services.MenuService.Dtos.DetailMenuInput)">
+            <summary>
+            详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Add(EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Edit(EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput)">
+            <summary>
+            更新
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Delete(EasyRuoyi.Application.Services.MenuService.Dtos.DeleteMenuInput)">
+            <summary>
+            删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.BatchDelete(EasyRuoyi.Application.Services.MenuService.Dtos.BatchDeleteMenuInput)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.DownloadTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Import(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            导入
+            </summary>
+            <param name="file">文件</param>
+            <param name="updateSupport">是否更新重复数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Export(EasyRuoyi.Application.Services.MenuService.Dtos.PageMenuInput)">
+            <summary>
+            导出
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.IMenuService.Tree">
+            <summary>
+            获取菜单tree结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.MenuService.MenuService">
+            <summary>
+            菜单服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Page(EasyRuoyi.Application.Services.MenuService.Dtos.PageMenuInput)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Detail(EasyRuoyi.Application.Services.MenuService.Dtos.DetailMenuInput)">
+            <summary>
+            详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Add(EasyRuoyi.Application.Services.MenuService.Dtos.AddMenuInput)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Edit(EasyRuoyi.Application.Services.MenuService.Dtos.UpdateMenuInput)">
+            <summary>
+            更新
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Delete(EasyRuoyi.Application.Services.MenuService.Dtos.DeleteMenuInput)">
+            <summary>
+            删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.BatchDelete(EasyRuoyi.Application.Services.MenuService.Dtos.BatchDeleteMenuInput)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.DownloadTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Import(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            导入
+            </summary>
+            <param name="file">文件</param>
+            <param name="updateSupport">是否更新重复数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Export(EasyRuoyi.Application.Services.MenuService.Dtos.PageMenuInput)">
+            <summary>
+            导出
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.Tree">
+            <summary>
+            获取菜单tree结构
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.BuildExportList(System.Collections.Generic.List{EasyRuoyi.Entities.Entities.Menu},System.Collections.Generic.List{EasyRuoyi.Entities.Entities.Menu},EasyRuoyi.Entities.Entities.Menu)">
+            <summary>
+            递归组织导出数据列表
+            </summary>
+            <param name="list"></param>
+            <param name="menus"></param>
+            <param name="menu"></param>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.DtoMapper(System.Collections.Generic.ICollection{EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto})">
+            <summary>
+            组织MenuPageDto
+            </summary>
+            <param name="rows"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.MenuService.MenuService.BuildMenuChildren(System.Collections.Generic.List{EasyRuoyi.Entities.Entities.Menu},EasyRuoyi.Application.Services.MenuService.Dtos.MenuPageDto)">
+            <summary>
+            递归获取MenuPageDto.Children
+            </summary>
+            <param name="menus"></param>
+            <param name="dto"></param>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleMenuService.Dtos.RoleMenuSaveInput">
+            <summary>
+            保存角色菜单 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleMenuService.Dtos.RoleMenuSaveInput.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleMenuService.Dtos.RoleMenuSaveInput.MenuIds">
+            <summary>
+            菜单Ids
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleMenuService.IRoleMenuService">
+            <summary>
+            角色菜单服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleMenuService.IRoleMenuService.GetRoleMenus(System.Guid)">
+            <summary>
+            查询角色菜单id列表
+            </summary>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleMenuService.IRoleMenuService.Save(EasyRuoyi.Application.Services.RoleMenuService.Dtos.RoleMenuSaveInput)">
+            <summary>
+            保存角色菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleMenuService.RoleMenuService">
+            <summary>
+            角色菜单服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleMenuService.RoleMenuService.GetRoleMenus(System.Guid)">
+            <summary>
+            查询角色菜单id列表
+            </summary>
+            <param name="roleId">角色id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleMenuService.RoleMenuService.Save(EasyRuoyi.Application.Services.RoleMenuService.Dtos.RoleMenuSaveInput)">
+            <summary>
+            保存角色菜单
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.AddRoleInput">
+            <summary>
+            新增角色 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.AddRoleInput.Name">
+            <summary>
+            名称（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.AddRoleInput.RoleCode">
+            <summary>
+            角色编号（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.AddRoleInput.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.AddRoleInput.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.BatchDeleteRoleInput">
+            <summary>
+            批量删除角色 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.BatchDeleteRoleInput.Ids">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.DeleteRoleInput">
+            <summary>
+            删除角色 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.DeleteRoleInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.DetailRoleInput">
+            <summary>
+            角色详情 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.DetailRoleInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.PageRoleInput">
+            <summary>
+            角色分页查询 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.PageRoleInput.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.PageRoleInput.RoleCode">
+            <summary>
+            角色编号
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto">
+            <summary>
+            角色Dto
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.Name">
+            <summary>
+            名称（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.RoleCode">
+            <summary>
+            角色编号（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.IsEnableStr">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.CreatedUserId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.CreatedUserName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.CreatedTimeStr">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.UpdatedUserId">
+            <summary>
+            修改人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.UpdatedUserName">
+            <summary>
+            修改人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.UpdatedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.UpdateTimeStr">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.IsDeleted">
+            <summary>
+            软删除
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleDto.DeletedTime">
+            <summary>
+            软删除时间
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.RoleExportDto`1">
+            <summary>
+            角色导出模板Dto。
+            模板根据需要自行修改。
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleExportDto`1.Name">
+            <summary>
+            导出模板名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleExportDto`1.Roles">
+            <summary>
+            导出模板数据
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.RoleImport">
+            <summary>
+            角色导入模板 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleImport.Name">
+            <summary>
+            名称（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleImport.RoleCode">
+            <summary>
+            角色编号（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleImport.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.RoleImport.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput">
+            <summary>
+            更新角色 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput.Name">
+            <summary>
+            名称（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput.RoleCode">
+            <summary>
+            角色编号（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.IRoleService">
+            <summary>
+            角色服务接口
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.Page(EasyRuoyi.Application.Services.RoleService.Dtos.PageRoleInput)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.List">
+            <summary>
+            所有角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.Detail(EasyRuoyi.Application.Services.RoleService.Dtos.DetailRoleInput)">
+            <summary>
+            详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.Add(EasyRuoyi.Application.Services.RoleService.Dtos.AddRoleInput)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.Edit(EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput)">
+            <summary>
+            更新
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.Delete(EasyRuoyi.Application.Services.RoleService.Dtos.DeleteRoleInput)">
+            <summary>
+            删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.BatchDelete(EasyRuoyi.Application.Services.RoleService.Dtos.BatchDeleteRoleInput)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.DownloadTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.Import(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            导入
+            </summary>
+            <param name="file">文件</param>
+            <param name="updateSupport">是否更新重复数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.IRoleService.Export(EasyRuoyi.Application.Services.RoleService.Dtos.PageRoleInput)">
+            <summary>
+            导出
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleService.RoleService">
+            <summary>
+            角色服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.Page(EasyRuoyi.Application.Services.RoleService.Dtos.PageRoleInput)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.List">
+            <summary>
+            所有角色列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.Detail(EasyRuoyi.Application.Services.RoleService.Dtos.DetailRoleInput)">
+            <summary>
+            详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.Add(EasyRuoyi.Application.Services.RoleService.Dtos.AddRoleInput)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.Edit(EasyRuoyi.Application.Services.RoleService.Dtos.UpdateRoleInput)">
+            <summary>
+            更新
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.Delete(EasyRuoyi.Application.Services.RoleService.Dtos.DeleteRoleInput)">
+            <summary>
+            删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.BatchDelete(EasyRuoyi.Application.Services.RoleService.Dtos.BatchDeleteRoleInput)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.DownloadTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.Import(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            导入
+            </summary>
+            <param name="file">文件</param>
+            <param name="updateSupport">是否更新重复数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleService.RoleService.Export(EasyRuoyi.Application.Services.RoleService.Dtos.PageRoleInput)">
+            <summary>
+            导出
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleUserService.Dtos.RoleUserSaveInput">
+            <summary>
+            保存用户角色 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleUserService.Dtos.RoleUserSaveInput.UserInfoId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.RoleUserService.Dtos.RoleUserSaveInput.RoleIds">
+            <summary>
+            角色Ids
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleUserService.IRoleUserService">
+            <summary>
+            用户角色服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleUserService.IRoleUserService.GetUserRoles(System.Guid)">
+            <summary>
+            查询用户角色id列表
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleUserService.IRoleUserService.Save(EasyRuoyi.Application.Services.RoleUserService.Dtos.RoleUserSaveInput)">
+            <summary>
+            保存用户角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.RoleUserService.RoleUserService">
+            <summary>
+            用户角色服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleUserService.RoleUserService.GetUserRoles(System.Guid)">
+            <summary>
+            查询用户角色id列表
+            </summary>
+            <param name="userId">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.RoleUserService.RoleUserService.Save(EasyRuoyi.Application.Services.RoleUserService.Dtos.RoleUserSaveInput)">
+            <summary>
+            保存用户角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.SysFileService.ISysFileService">
+            <summary>
+            文件信息服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.SysFileService.ISysFileService.DownloadImportErrorFile(System.Guid)">
+            <summary>
+            下载导入错误提示excel文件
+            </summary>
+            <param name="id">文件id</param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.SysFileService.SysFileService">
+            <summary>
+            文件信息服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.SysFileService.SysFileService.#ctor(Furion.DatabaseAccessor.IRepository{EasyRuoyi.Entities.Entities.SysFile})">
+            <summary>
+            SysFileService
+            </summary>
+            <param name="repSysFile"></param>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.SysFileService.SysFileService.DownloadImportErrorFile(System.Guid)">
+            <summary>
+            下载导入错误提示excel文件
+            </summary>
+            <param name="id">文件id</param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput">
+            <summary>
+            修改基本资料 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput.EnumGender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput.SID">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput.BornDate">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdateHeadUrlInput">
+            <summary>
+            修改头像 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdateHeadUrlInput.HeadUrl">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdatePwdInput">
+            <summary>
+            修改密码 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdatePwdInput.Id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdatePwdInput.OldPwd">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdatePwdInput.NewPwd1">
+            <summary>
+            新密码
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdatePwdInput.NewPwd2">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserCenterService.IUserCenterService">
+            <summary>
+            用户中心服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.IUserCenterService.EditEmp(EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput)">
+            <summary>
+            修改基本资料
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.IUserCenterService.UpdatePwd(EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdatePwdInput)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.IUserCenterService.GetHeadUrl">
+            <summary>
+            查询用户头像url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.IUserCenterService.UpdateHeadUrl(EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdateHeadUrlInput)">
+            <summary>
+            修改头像
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserCenterService.UserCenterService">
+            <summary>
+            用户中心服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.UserCenterService.EditEmp(EasyRuoyi.Application.Services.UserCenterService.Dtos.EditEmpInput)">
+            <summary>
+            修改基本资料
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.UserCenterService.UpdatePwd(EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdatePwdInput)">
+            <summary>
+            修改密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.UserCenterService.GetHeadUrl">
+            <summary>
+            查询用户头像url
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserCenterService.UserCenterService.UpdateHeadUrl(EasyRuoyi.Application.Services.UserCenterService.Dtos.UpdateHeadUrlInput)">
+            <summary>
+            修改头像
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput">
+            <summary>
+            新增用户 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput.EnumGender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput.SID">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput.BornDate">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput.HeadUrl">
+            <summary>
+            头像。
+            格式："[{id:'',name:'',length:'',url:''},{id:'',name:'',length:'',url:''}]"
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.BatchDeleteUserInfoInput">
+            <summary>
+            批量删除用户 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.BatchDeleteUserInfoInput.Ids">
+            <summary>
+            Ids
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.DeleteUserInfoInput">
+            <summary>
+            删除用户 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.DeleteUserInfoInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.DetailUserInfoInput">
+            <summary>
+            用户详情 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.DetailUserInfoInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput">
+            <summary>
+            用户分页查询 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput">
+            <summary>
+            更新用户 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.EnumGender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.SID">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.BornDate">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.IsEnable">
+            <summary>
+            是否启用（0=未启用，1=启用）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput.HeadUrl">
+            <summary>
+            头像。
+            格式："[{id:'',name:'',length:'',url:''},{id:'',name:'',length:'',url:''}]"
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto">
+            <summary>
+            用户 dto
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.UserName">
+            <summary>
+            用户名（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.EmployeeId">
+            <summary>
+            员工
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.EnumGender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.EnumGenderStr">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.IsEnable">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.IsEnableStr">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.SID">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.BornDate">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.BornDateStr">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.HeadUrl">
+            <summary>
+            头像。
+            格式："[{id:'',name:'',length:'',url:''},{id:'',name:'',length:'',url:''}]"
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.CreatedUserId">
+            <summary>
+            创建人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.CreatedUserName">
+            <summary>
+            创建人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.CreatedTimeStr">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.UpdatedUserId">
+            <summary>
+            修改人Id
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.UpdatedUserName">
+            <summary>
+            修改人名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.UpdatedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.UpdateTimeStr">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.IsDeleted">
+            <summary>
+            软删除
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto.DeletedTime">
+            <summary>
+            软删除时间
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoExportDto`1">
+            <summary>
+            角色导出模板Dto。
+            模板根据需要自行修改。
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoExportDto`1.Name">
+            <summary>
+            导出模板名称
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoExportDto`1.UserInfos">
+            <summary>
+            导出模板数据
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoImport">
+            <summary>
+            用户导入模板 input
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoImport.UserName">
+            <summary>
+            用户名（唯一）
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoImport.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoImport.EnumGender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoImport.Tel">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoImport.SID">
+            <summary>
+            身份证
+            </summary>
+        </member>
+        <member name="P:EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoImport.BornDate">
+            <summary>
+            出生日期
+            </summary>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.Page(EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.Detail(EasyRuoyi.Application.Services.UserInfoService.Dtos.DetailUserInfoInput)">
+            <summary>
+            详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.Add(EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.Edit(EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput)">
+            <summary>
+            更新
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.Delete(EasyRuoyi.Application.Services.UserInfoService.Dtos.DeleteUserInfoInput)">
+            <summary>
+            删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.BatchDelete(EasyRuoyi.Application.Services.UserInfoService.Dtos.BatchDeleteUserInfoInput)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.DownloadTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.Import(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            导入
+            </summary>
+            <param name="file">文件</param>
+            <param name="updateSupport">是否更新重复数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.IUserInfoService.Export(EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput)">
+            <summary>
+            导出
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EasyRuoyi.Application.Services.UserInfoService.UserInfoService">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.#ctor(Furion.DatabaseAccessor.IRepository{EasyRuoyi.Entities.Entities.UserInfo},Furion.DatabaseAccessor.IRepository{EasyRuoyi.Entities.Entities.Employee},EasyRuoyi.Application.RemoteServices.FileServerRemoteService.IFileServerRemoteService)">
+            <summary>
+            UserInfoService
+            </summary>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.Page(EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.Detail(EasyRuoyi.Application.Services.UserInfoService.Dtos.DetailUserInfoInput)">
+            <summary>
+            详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.Add(EasyRuoyi.Application.Services.UserInfoService.Dtos.AddUserInfoInput)">
+            <summary>
+            新增
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.Edit(EasyRuoyi.Application.Services.UserInfoService.Dtos.UpdateUserInfoInput)">
+            <summary>
+            更新
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.Delete(EasyRuoyi.Application.Services.UserInfoService.Dtos.DeleteUserInfoInput)">
+            <summary>
+            删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.BatchDelete(EasyRuoyi.Application.Services.UserInfoService.Dtos.BatchDeleteUserInfoInput)">
+            <summary>
+            批量删除
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.DownloadTemplate">
+            <summary>
+            下载导入模板
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.Import(Microsoft.AspNetCore.Http.IFormFile,System.Boolean)">
+            <summary>
+            导入
+            </summary>
+            <param name="file">文件</param>
+            <param name="updateSupport">是否更新重复数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.Export(EasyRuoyi.Application.Services.UserInfoService.Dtos.PageUserInfoInput)">
+            <summary>
+            导出
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EasyRuoyi.Application.Services.UserInfoService.UserInfoService.DtoMapper(System.Collections.Generic.ICollection{EasyRuoyi.Application.Services.UserInfoService.Dtos.UserInfoDto})">
+            <summary>
+            组织Dto
+            </summary>
+            <param name="rows"></param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\FileServer.Application\FileServer.Application.csproj" />
+	  <ProjectReference Include="..\FileServer.Database.Migrations\FileServer.Database.Migrations.csproj" />
+	</ItemGroup>
+
+</Project>

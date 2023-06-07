@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>EasyRuoyi.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="applicationsettings.json" />
+    <None Remove="EasyRuoyi.Core.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="applicationsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Furion" Version="4.8.7" />
+    <PackageReference Include="Furion.Extras.Authentication.JwtBearer" Version="4.8.7" />
+    <PackageReference Include="Furion.Extras.Logging.Serilog" Version="4.8.7" />
+    <PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="4.8.7" />
+    <PackageReference Include="Magicodes.IE.Excel" Version="2.7.4.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.4" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.0.1" />
+	<PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta15" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿{
+	"SeedData": {
+		"Role": {
+			"Id": "0df02f30-9cdb-5cb4-970a-316e5212bb34",
+			"Name": "超级管理员"
+		},
+		"UserInfo": {
+			"Id": "292f2321-577a-a7a5-4389-4a0e4a801fc3",
+			"UserName": "admin",
+			"Name": "超级管理员"
+		}
+	}
+}

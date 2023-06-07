@@ -1,0 +1,1 @@
+export { hasPermi, hasRole } from "./permission";
