@@ -63,23 +63,6 @@ const onSubmit = async (ruleFormRef: FormInstance | undefined) => {
   if (!ruleFormRef) return;
   await ruleFormRef.validate(async (valid, fields) => {
     if (valid) {
-      //let params = { userName: form.userName, password: form.password }
-      // let resp = (await login(params)) as any;
-      // console.log("resp", resp);
-      // if (resp.success) {
-      //   localStorage["accessToken"] = resp.data.accessToken;
-      //   localStorage["userInfo"] = resp.data.userInfo;
-      //   store.commit("SetAccessToken", resp.data.accessToken);
-      //   store.commit("SetUserInfo", resp.data.userInfo);
-      //   router.push({ path: "/desktop" });
-      // } else {
-      //   // ElMessage({
-      //   //   type: "error",
-      //   //   message: resp.message,
-      //   // });
-      //   ElMessage.error(resp.message);
-      // }
-
       userStore().userLogin(form).then(() => {
         ElMessage({
           type: "success",
@@ -87,11 +70,13 @@ const onSubmit = async (ruleFormRef: FormInstance | undefined) => {
         });
         // router.push("/")
         router.replace("/")
-      }).catch(() => {
+      }).catch((err) => {
+        // console.log("err", err)
         ElMessage({
           type: "error",
-          message: "用户名或密码错误！登录失败！"
+          message: err
         })
+        getCode();
       })
 
       // console.log("正在登录...");
