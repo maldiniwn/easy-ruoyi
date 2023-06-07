@@ -65,11 +65,12 @@ instance.interceptors.response.use((resp: AxiosResponse) => {
       // console.log("400");
       let message = "opps~~";
       if (resp.data.message) message += resp.data.message;
-      ElMessage({
-        type: "warning",
-        message: message
-      });
-      return Promise.reject(new Error(message));
+      // ElMessage({
+      //   type: "warning",
+      //   message: message
+      // });
+      // return Promise.reject(new Error(message));
+      return Promise.reject(message);
     } else if (500 == code) {
       console.log("500");
     } else if (200 != code) {
